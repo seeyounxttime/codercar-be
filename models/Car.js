@@ -41,7 +41,6 @@ const carSchema = new mongoose.Schema(
     isDeleted: { type: Boolean, default: false, required: true },
   },
   {
-    timestamps: true,
     collection: "cars",
   }
 );
