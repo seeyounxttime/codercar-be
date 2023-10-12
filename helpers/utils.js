@@ -17,7 +17,7 @@ utilsHelper.sendResponse = (
   if (totalCar) response.totalCar = totalCar;
   if (errors) response.errors = errors;
   if (totalPages) response.totalPages = totalPages;
-  return res.status(status).json(response);
+  return res.status(status).json({ data: response });
 };
 
 class AppError extends Error {
