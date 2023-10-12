@@ -19,7 +19,7 @@ const { sendResponse, AppError } = require("./helpers/utils.js");
 
 // Connect to MONGODB
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, { dbName: "coder_cars" })
   .then(() => console.log(`Connected to Database! ${process.env.MONGO_URI}`))
   .catch((err) => console.log(err, "Error"));
 
